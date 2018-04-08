@@ -15,7 +15,8 @@ foreach my $table (@{$out_ref->{'table_names'}}){
 }
 
 print "* table name(map&print) *","\n";
-map { print $_,"\n" } @{$out_ref->{'table_names'}};
+#map { print $_,"\n" } @{$out_ref->{'table_names'}};
+map { print $_,"\n" } @{$parser->structure->{'table_names'}};
 
 print "* column name *","\n";
 foreach my $column (@{$out_ref->{'org_col_names'}}){
